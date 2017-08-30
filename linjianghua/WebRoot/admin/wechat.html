@@ -1,0 +1,62 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片上传本地预览</title>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css" />
+<script src="${contextPath}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/admin_img.css">
+<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+
+</head>
+<body>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>原图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+		<#list wechatList as obj>
+			<tr>
+				<td>
+					<div id="preview${obj.picId}" class="picdiv">
+						<img id="imghead${obj.picId}" src='${obj.picHref}' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/updatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="id" value="${obj.picId}" /><br>
+						<p>${obj.remark}</p><br>
+						<input type="hidden" name="type" value="15" />
+						<input type="file" name="myfile" onchange="previewImage(this,${obj.picId})" id="${obj.picId}" /><br> <input
+							type="submit" value="上传" onclick="return checknull('#${obj.picId}')"/>
+					</form></td>
+			</tr>
+		</#list>			
+				
+		</tbody>
+	</table>
+</body>
+<script type="text/javascript">	
+	function checknull(id){		
+		var oInput = $(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{
+				alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 
+			return ;
+		}											
+</script>
+</html>

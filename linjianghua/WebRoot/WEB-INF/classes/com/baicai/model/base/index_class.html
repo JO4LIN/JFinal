@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" language="javascript"
+	src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/admin_uploadPre.js"></script>
+</head>
+<body>
+	<form action="/home/updateClass" method="post"> 
+		<table class="table table-bordered">
+			<tbody>
+			<#list listClass as obj>
+				<tr>
+					<input type="hidden" name="classId" value="${obj.classId}" />
+					<td><p>标题</p></td>
+					<td><input class="form-control" name="title" value="${obj.title}"/></td>
+					<td><p>链接</p></td>
+					<td><input class="form-control" name="contextHref" value="${obj.contextHref}"/></td>
+				</tr>
+			</#list>
+				<input type="submit" value="保存">
+			</tbody>
+		</table>
+	</form>
+
+	<form action="/home/updatePic" method="post"> 
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td>客服电话图</td>
+					<td><div id="preview">
+								<img id="imghead" width="150" height="150" border="0" src='${phonePic}' />
+						</div>
+						<input type="hidden" name="id" value="1" />
+						<input type="hidden" name="type" value="7" />
+						<input type="file" onchange="previewImage(this)"/><br>
+						<input type="submit" value="保存">
+				 	</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>白菜适家-珠海互联网家装-只为更好地装修-固定一线工人-关于我们</title> 
+	<meta charset="utf-8">
+	<meta name="keywords" content="白菜适家,珠海中山装修,珠海中山装修公司,珠海中山装修设计,珠海别墅装修设计,珠海中山装修平台,珠海装修网,珠海中山装修公司排名,珠海中山装修首选白菜适家">
+	<meta name="description" content="白菜适家-互联网透明家装-工程直营-自有产业工人-固定一线工人">
+	<meta name="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" /> 
+
+
+	<link type="text/css" rel="stylesheet" href="${contextPath}/css/client_index.css">
+	<link rel="stylesheet" type="text/css" href="${contextPath}/css/client_validform.css">	
+	<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/client_head.nav.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/client_getVerifyCode.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/Validform_v5.3.2_min.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/client_bannerForm.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/jquery.select.js" ></script>
+	<script type="text/javascript">
+	    $(function(){
+	        $('select.select').select();
+	    });
+	</script>
+	</head> 
+	
+	<body>	
+	<script>
+	
+	function show(obj,id) {    
+	    var objDiv = $("#"+id+"");
+	    $(objDiv).css("display","block");
+	    $(objDiv).css("left", event.clientX);
+	    $(objDiv).css("top", event.clientY + 10);  
+	}
+	function hide(obj,id) {
+	    var objDiv = $("#"+id+"");
+	    $(objDiv).css("display", "none");
+	} 
+	</script>
+
+
+<div id="area" style="position:absolute;display:none;color:#fff;background:#000;width:100px;text-align:center;z-index:999; opacity: 0.7;">
+	<p>服务地区</p>
+	<div style="background:#fff;width:110px;height:1px"></div>
+	<p style="border-right: 1px solid #fff;float:left;padding:10px 10px 10px 10px">珠海</p>
+	<p style="float:left;padding:10px 10px 10px 10px">中山</p>
+</div>
+
+<!--头部-->
+	<div class="head">
+	    <div class="headCenter">
+	        <!--城市切换-->
+	        <div class="headArea">
+	        <p>房屋所在城市：
+		        <select class="select" name="state" data-value="1">
+		            <option value ="0">中山市</option>
+		            <option value ="1" >珠海市</option>		            
+	        	</select>
+        	</p>	
+	        </div>
+	        <!--登录注册 -->        
+	        <div class="headFunction"></div>
+	     </div>
+	     <img id="mydiv1"  alt="白菜适家" src="${listBottom[0].wechatCode}" style="width:100px; height:100px;position:absolute;display:none; z-index:999;border:1px solid silver;background:silver;">
+	     
+	</div>
+  
+  
+  <!-- 导航栏 -->
+<div class="nav">
+    <div class="navCenter">
+    <div class="navLogo"><img style="margin:10px 0 0 0 " alt="白菜适家" src="${contextPath}/images/baicai_logo.png"></div>
+	<div class="navCon">
+		
+		<ul class="list">
+        	<li><a href="/">首页</a></li>
+        	<li><a href="${contextPath}/new_house">新房套餐</a></li>
+        	<li><a href="${contextPath}/old_house">旧房套餐</a></li>
+        	<li><a href="${contextPath}/virtualShow">实景作品</a></li>
+        	<li><a href="${contextPath}/threeD">3D体验馆</a></li>
+        	<li><a target="_blank" href="http://www.baicai-home.com/bbs/forum.php?mod=forumdisplay&fid=2">工地直播</a></li>
+        	<li><a target="_blank" href="${contextPath}/index_read">常见问题</a></li>
+        </ul>
+
+	</div>
+    </div>
+</div>
+<div style="min-width:1200px;border-top: 1px solid #F78C0A;"></div>
+
+<div class="center" style="height:702px;color:#6D6D6D">
+<div class="bannerCenter">
+
+<div style="margin: 0 auto;max-width:1200px;">
+		<div class="wrap" id="wrap" style="opacity:1;border:1px solid #b7b7b7;top:33%;left:75%">
+	        <ul class="tabClick">
+	            <li class="active">0元设计</li>
+	            <li>免费报价</li>
+	        </ul>
+	        <div class="lineBorder">
+	            <div class="lineDiv"></div>
+	        </div>
+	        <div class="tabCon">
+	            <div class="tabBox">
+	                <div class="tabList">
+		                <div style="background:#DDDDDD;width:200px;height:1px;margin:10px auto"></div>
+	                	<p style="font-size:17px">专业设计师为您量身定制</p>                	 
+	                	<div style="background:#DDDDDD;width:200px;height:1px;margin:10px auto"></div>              	
+	                    <form action="${contextPath}/reserveInfo/autoRegister" method="post" id="designForm">
+	                        <div class="control-group" id="telephone_input">
+	                            <input type="text" name="realName" class="telephone" placeholder="您的称呼" datatype="zhongwen" nullmsg="请输入您的称呼" errormsg="请输入正确的姓名！"/>               	                 
+	                        	<div class="info"><span class="Validform_checktip"></span><span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+	                        </div>
+	                        <div class="control-group" id="yzm_input">
+	                             <input type="text" name="phone" class="phone" placeholder="您的手机号" autocomplete="off" datatype="m" nullmsg="请输入手机号！" errormsg="请输入正确的手机号码！"/>
+	                             <div class="info"><span class="Validform_checktip">请输入正确的手机号码！</span><span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>  
+	                        </div>
+	                        <button id="submit" type="submit">抢先领取</button>
+	                    </form>
+	                </div>
+	                
+	                <div class="tabList" style="display:none">
+	                 	<div style="background:#DDDDDD;width:200px;height:1px;margin:10px auto"></div>
+	                	<p style="font-size:17px">预算烦恼一步解决</p>
+	                	 
+	                	<div style="background:#DDDDDD;width:200px;height:1px;margin:10px auto"></div>              	
+	                    
+	                    <form action="${contextPath}/reserveInfo/autoRegister" method="post" id="priceForm" onSubmit="return check2();">
+	                        <div class="control-group" id="username_input">
+	                        	<input type="hidden" name="cost" value="true"/>
+	                            <input type="text" name="area" class="username" placeholder="建筑面积(m²)" datatype="n1-5" nullmsg="请输入面积"/>            
+	                        	<div class="info"><span class="Validform_checktip"></span><span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+	                        </div>
+	                        <div class="control-group" id="pwd_input">
+	                            <input type="text" name="realName"  class="username" placeholder="您的称呼" datatype="zhongwen" nullmsg="请输入您的称呼"/>	                  
+	                        	<div class="info"><span class="Validform_checktip"></span><span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+	                        </div>
+	                        <div class="control-group" id="pwd_input">
+	                           <input type="text" name="phone" class="username" placeholder="您的手机号" autocomplete="off" datatype="m" nullmsg="请输入手机号！" errormsg="请输入正确的手机号码！"/>                         
+	                        	<div class="info"><span class="Validform_checktip">请输入正确的手机号码！</span><span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>  
+	                        </div>
+	                        <button id="submit" type="submit">立刻获取报价</button>
+	                    </form>
+	                </div>
+	            </div>
+	        </div>     
+	    </div>
+<img style="height:139px;width: 250px;margin-top: 400px;margin-left: 900px;position: absolute;" alt="白菜适家" src="${phonePic}">	    
+	</div>
+	<h1 style="margin-left: 57px;margin-top:20px">品牌故事</h1>		
+<div class="aboutUs">
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp家装是为了让生活更幸福，但往往却是心力交瘁的体验。</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp一个简单的初心，造就了今天的白菜适家。</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp白菜适家，一个听起来，看起来，甚至做起来都是一家很特别的公司。</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp事实上，我们真的与众不同。 </P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp从一开始，我们就企图从家装复杂的市场中，寻找纯粹的初心，并坚持实现它。 实现它的方法有千万种，但最终，都是为<br>了更省心的装修，为了更愉快的体验，为了更幸福的生活。</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp都说爱一个就为TA装修，恨一个人就让TA去装修。可见家庭装修是个多么复杂的工程，其中最头疼的就是四个字——<br>不确定性。不确定的效果、不确定的价格、不确定的质量，装修过的人深有体会。</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp八年来，白菜适家坚持站在业主立场与角度看待装修过程中的点点滴滴。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们开创装修史上先河，坚持水电隐蔽工程0增项，插座电位不限，水管米数不限，解决最大价格不确定性；</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们100%固定一线产业工人，他们经验丰富，专业度高，责任心强。严格执行80道标准工艺严格自检互检，选用环保辅<br>材，名牌主材，同时水电隐蔽工程质保十年，解决品质不确定。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们提供VR全景虚拟装修现实，让您提前遇见梦想中的家，并在设计前进行元素概念沟通，确保设计与需求贴合，除此<br>之外，我们还提供后期软装配饰服务，解决了效果不确定。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们限定接单量，既保证施工质量与服务品质，又确保工期进度。在开工前量身定制施工进度表，项目进度与业主自购材<br>料进场时间一目了然，解决了工期不确定。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们有您专属的项目管家，装修进程定时播报，现场实景拍摄，验收可视化，我们的微信端个人中心支持即时在线预约，<br>一分钟在线报价，个人中心提供合同及图纸下载，快捷进入工地直播，项目管家随时响应，为您解决了服务不确定性。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp八年来，我们坚持在BBS记录每一位客户的装修全过程，接受新客户审视的同时也接受同行监督，公开所有的装修施工细<br>节，我们坚信现场力量大于一切，实景作品方可诠释实力。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这就是，与众不同的互联网透明装修品牌——白菜适家。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们的使命是：只为更好地装修。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们的愿景是：未来的人们怀着憧憬的心情开始装修，以美好的心情结束装修。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp幸福没有刻度，家装却有标准，透过砖石水泥墙壁，我们想传达呈现的真实价值，就是装修与幸福的标准刻度。</P>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp为此，我们一直在努力的路上奋斗，与万千家庭同行。</P>
+	
+
+
+</div>
+</div>
+
+	
+		
+	
+</div>
+	
+<!-- 底部foot -->
+
+<div class="foot">
+	<div class="footCenter">
+		<div class="footP1">
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=173824876&site=qq&menu=yes">加入我们</a> 
+			<p> 联系电话：${listBottom[0].phone} <br/>QQ：${listBottom[0].qq}  <br/>邮箱：${listBottom[0].email}
+	        </p>
+		</div>
+		<div class="footP2">
+			<a href="${contextPath}/aboutUs">品牌故事</a>
+			<p>地址：${listBottom[0].adress}<br />版权所有：${listBottom[0].copyright}<br />备案号：${listBottom[0].recordNum}</p>
+		</div>
+		<div class="footP3">
+			<a>官方微信公众号</a>
+			<div class="twocode"> 
+				<img alt="白菜适家" src="${listBottom[0].wechatCode}"> 
+			</div>
+		</div>
+		<div class="footP4">
+			<a style="margin-left:50px">扫一扫工地现场</a>
+			<div class="twocode"> 				
+				<img alt="白菜适家" src="${listBottom[0].constructCode}" style="margin-left:50px">
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+jQuery(function(){
+    jQuery("#designForm").Validform({
+        tiptype:function(msg,o,cssctl){       
+            if(!o.obj.is("form")){
+                var objtip=o.obj.siblings().find(".Validform_checktip");
+                cssctl(objtip,o.type);
+                objtip.text(msg);
+                var infoObj=o.obj.siblings(".info");
+                if(o.type==2){
+                    infoObj.hide();
+                }else{
+                    if(infoObj.is(":visible")){return;}
+                    var left=o.obj.offset().left,
+                        top=o.obj.offset().top;
+    
+                    infoObj.css({
+                        left:left,
+                        top:top-250
+                    }).show().animate({
+                    	left:left-50,
+                        top:top-350 
+                    },200);
+                } 
+            }   
+        },
+        postonce:true,
+        ajaxPost:true,
+        datatype:{
+	        "password": /^(\w){6,20}$/,
+	        "zhongwen": /^[\u4e00-\u9fa5]{2,5}$/
+        },
+        
+        callback:function(data){
+        if(data.CAllBACK_STATUS==100){
+        	window.location.href="${contextPath}/reserveSuccess"
+        }
+	}
+    });
+})
+</script>
+
+<script type="text/javascript">
+jQuery(function(){
+    jQuery("#priceForm").Validform({
+        tiptype:function(msg,o,cssctl){       
+            if(!o.obj.is("form")){
+                var objtip=o.obj.siblings().find(".Validform_checktip");
+                cssctl(objtip,o.type);
+                objtip.text(msg);
+                var infoObj=o.obj.siblings(".info");
+                if(o.type==2){
+                    infoObj.hide();
+                }else{
+                    if(infoObj.is(":visible")){return;}
+                    var left=o.obj.offset().left,
+                        top=o.obj.offset().top;
+    
+                    infoObj.css({
+                        left:left,
+                        top:top-200
+                    }).show().animate({
+                    	left:left-50,
+                        top:top-350
+                    },200);
+                } 
+            }   
+        },
+        postonce:true,
+        ajaxPost:true,
+        datatype:{
+	        "password": /^(\w){6,20}$/,
+	        "zhongwen": /^[\u4e00-\u9fa5]{2,5}$/
+        },
+        callback:function(data){
+        if(data.CAllBACK_STATUS==100){
+        	window.location.href="${contextPath}/index_cost"
+        }
+	}
+    });
+})
+</script>
+</body>
+</html>

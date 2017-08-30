@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="${contextPath}/orderInfo/addOrder" method="post" class=".form-group" id="myform">
+		<table class="table">
+		 
+			<tr>
+				<td><label>联系方式 </label></td>
+				<td><input type="text" name="o.phone" id="phone" class="form-control" onblur="checkexist()"></td>
+			</tr>
+			<tr>
+				<td><label>产品 </label></td>
+				<td><input type="text" name="o.product" id="product"  class="form-control"></td>
+			</tr>
+			<tr>
+				<td><label>进度 </label></td>
+				<td><input type="text" name="o.progress"  id="progress" class="form-control"></td>
+			</tr>
+			<tr>
+				<td><label>设计师 </label></td>
+				<td>
+					<select class="input_md form-control"   name="o.designer">
+						<#list designerList as obj>
+							<option value="${obj.employeeId}">${obj.realName}</option>
+						</#list>
+					</select>
+				</td>
+
+			</tr>
+
+			<tr>
+				<td><label>工程师 </label></td>				
+				<td>
+					<select class="input_md form-control"  name="o.engineer">
+						<#list engineerList as obj>
+							<option value="${obj.employeeId}">${obj.realName}</option>
+						</#list>
+					</select>
+				</td>				
+			</tr>
+
+			<tr>
+				<td><label>客服</label></td>
+				 
+				 <td>
+					<select class="input_md form-control" name="o.service">
+						<#list kefuList as obj>
+							<option value="${obj.employeeId}">${obj.realName}</option>
+						</#list>
+					</select>
+				</td>
+				
+				
+			</tr>
+
+			<tr>
+				<td><label>状态 </label></td>
+				<td><input type="text" name="o.state" class="form-control"></td>
+			</tr>
+			<tr>
+				<td><label>房屋地址</label></td>
+				<td><input type="text" name="o.houseAdress"
+					class="form-control"></td>
+			</tr>
+		</table>
+	<td><input onclick="ajaxsubmit()" type="button" class="btn btn-default" value="提交"/></td>
+		</form>
+</body>
+<script type="text/javascript">
+	function checkexist()
+	{
+		var va=$("#phone");
+		if(va.val()=='')
+		{
+			alert("联系方式不能为空！");
+			return;
+		}else{
+			$.ajax({ 
+		        type: "POST", 		    
+		        dataType: "JSON", 		    
+		        async: false, 
+		        url: "${contextPath}/userInfo/checkMobileRegister?phone="+va.val(),
+		        success: function(data) {
+		            	if (data.result == 1) {
+		            	     alert(data.msg);  	     
+		                } 
+		        }
+		    });
+		}		 
+	}
+</script> 
+<script type="text/javascript">
+function ajaxsubmit() {
+		if($("#phone").val()=='')
+		{
+			alert("联系方式不能为空");
+			return;
+		}else if($("#product").val()=='')
+		{
+			alert("产品不能为空");
+			return;
+		}else if($("#progress").val()=='')
+		{
+			alert("进度不能为空");
+			return;
+		}else if($("#houseAdress").val()=='')
+		 {
+			alert("房屋地址不能为空");
+			return;
+		}else{
+			$.ajax({ 
+		        type: "POST", 		    
+		        dataType: "JSON", 
+		        data: $("#myform").serialize(),
+		        async: false, 
+		        url: "${contextPath}/orderInfo/addOrder",
+		        success: function(data) {
+		            	if (data.result == 1) {
+		            		alert(data.msg)
+		            		window.location.reload();//刷新当前页面.	            	     
+		                } else {		                                   
+		                	alert(data.msg)
+		                	window.location.reload();//刷新当前页面.	  
+		                }
+		        }
+		    });
+		}
+	   }
+</script>
+</html>

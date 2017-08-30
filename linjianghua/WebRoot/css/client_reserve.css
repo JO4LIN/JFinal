@@ -1,0 +1,432 @@
+@charset "utf-8";
+
+*, *::before, *::after {  
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ 
+html, body {
+	min-width: 1200px;
+    color: #333;
+    height: 100%;
+
+}
+body, input, button, select {
+    background: #fff none repeat scroll 0 0;
+    font-family: "Microsoft YaHei","微软雅黑",STXihei;
+    font-size: 14px;
+}
+a {
+    outline: 0 none;
+    text-decoration: none;
+}
+img {
+    border: 0 none;
+}
+ol, ul, li, table, tbody {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/*头部*/
+.head {
+  min-width: 1200px !important;
+  background-color: #F3F3F3;
+  color: #b0b0b0;
+  margin: 0 auto;
+}
+.head .headCenter {
+  width: 1200px;
+  margin: 0 auto;
+  height: 35px;
+  line-height: 35px;
+}
+.head .headCenter .headArea {
+  float: left;
+  position: relative;
+  background: url('http://bj.ikongjian.com/new/assets/img/ico/head_location.png') no-repeat 5px center;
+  padding-left: 25px;
+  color:#000
+}
+.head .headCenter .headArea .headAreaA {
+  color: #fff;
+  cursor: pointer;
+  padding: 0 18px 0 10px;
+  background: url('http://www.ikongjian.com/img/ico/head_down.png') no-repeat right center;
+}
+.head .headCenter .headArea .headAreaList {
+  display: none;
+  position: absolute;
+  color: #fff;
+  z-index: 1000;
+  top: 35px;
+  left: 109px;
+  background: rgba(51, 51, 51, 0.8);
+}
+.head .headCenter .headArea .headAreaList table {
+  margin-bottom: 8px;
+}
+.head .headCenter .headArea .headAreaList th {
+  font-style: normal;
+  font-weight: normal;
+  border-right: 1px solid #b0b0b0;
+  border-bottom: 1px solid #b0b0b0;
+}
+.head .headCenter .headArea .headAreaList td {
+  border-bottom: 1px solid #b0b0b0;
+  padding: 0 5px;
+}
+.head .headCenter .headArea .headAreaList td a {
+  color: #fff;
+  margin: 0 5px;
+}
+.head .headCenter .headArea .headAreaList p {
+  line-height: 20px;
+  padding: 0 12px;
+  margin-bottom: 8px;
+}
+.head .headCenter .headFunction {
+  float: right;
+  min-width: 670px;
+}
+.head .headCenter .headFunction a {
+  color: #b0b0b0;
+  font-size: 12px;
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 8.5px;
+}
+.head .headCenter .headFunction .headLogin {
+  border: 1px solid #b0b0b0;
+  float: left;
+  text-align: center;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  behavior: url('#');
+  width: 67px;
+  height: 20px;
+  line-height: 18px;
+  margin: 7.5px 7px 0 0;
+  color:#000
+}
+.head .headCenter .headFunction .headLogin:hover {
+  background-color: #b0b0b0;
+  color: #333333;
+}
+
+.head .headCenter .headFunction .headWechat {
+  width: 80px;
+  background: url('http://bj.ikongjian.com/new/assets/img/ico/head_weixin.png') no-repeat left center;
+  padding-left: 34px;
+  margin: 8.5px 0px 0 20px;
+  color:#000
+}
+.head .headCenter .headFunction .headTribe {
+
+  background: url('http://bj.ikongjian.com/new/assets/img/ico/head_buluo.png') no-repeat left center;
+  padding-left: 28px;
+  color:#000
+}
+.head .headCenter .headFunction .headWelcome {
+  font-style: normal;
+  font-weight: normal;
+  float: left;
+  font-size: 12px;
+  margin-right: 27px;
+  color:#000
+}
+.head .headCenter .headFunction .headPhone{
+	color:#F78C0A;
+}
+
+.select{color:#F78C0A;position:relative;width:85px;height:35px;cursor:pointer;float: right;z-index: 999;}
+.select:after{content:"";position:absolute;top:50%;right:10px;margin-top:-2px;border-top:5px solid #666;border-right:5px solid transparent;border-left:5px solid transparent;}
+.select .select_text{padding:0 20px 0 10px;height:36px;line-height:36px;font-size:15px}
+.select_ul{display:none;position:absolute;top:34px;left:-1px;width:134px;min-width:134px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;background:#fff;}
+.select_ul li{line-height:36px;text-indent:10px;}
+.select_ul li:hover{color:#fff;background:#f0ac3c;}
+.select_ul li.cur{color:#fff;background:#F78C0A;}
+
+/*导航栏*/
+
+.nav{ 
+	width:1200px; 
+	height:83px; 
+	background:ffffff; 
+	margin: 0 auto;
+}
+.navCenter{
+	width:1200px;
+	margin:0 auto;
+}
+.navLogo{
+	height:83px;
+	float:left;	
+}
+
+
+.navCon{ 
+	height:60px;  
+	position:relative;
+	margin-left:10px;
+	float:right
+}
+
+.navCon li{ 
+	float:left;
+}
+.navCon li a{ 
+	display:block; 
+	padding:0 30px; 
+	line-height:90px; 
+	color:#333;
+	font-size:17px
+}
+
+.navCon li a:hover,.navCon li a.on{ 
+	color:#F78C0A;
+}
+
+.navCon .line{ 
+	width:150px; 
+	height:3px;  
+	background:#F78C0A; 
+	position:absolute; 
+	top:75px; 
+	left:0;
+}
+
+
+
+
+
+/*主体*/
+
+.reserve-wrapper {
+	width:1200px;
+	height: 600px;
+	background: url(../images/yuyueBackground.jpg)	50% 0 no-repeat;
+	margin:0px auto;
+}
+.reserve-wrapper p{
+	font-size:30px;
+	text-align: center;
+	color:#F78C0A;
+	margin:100px 0 0 0;
+}
+.reserve-wrapper h1{
+	font-size:20px;
+	text-align: center;
+	color:#000000;
+	margin:20px 0 0 0;
+}
+.reserve-box {
+	width: 320px;
+	height: 328px;
+	padding: 20px;
+	background-color: #fff;
+	float:right;
+	margin:60px 445px 0 0;
+}
+
+.reserve-box .reserve-tabs {
+	font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1',
+		sans-serif;
+	margin-bottom: 15px;
+	padding: 0;
+	list-style: none;
+	border-bottom: 2px solid #d9d9d9;
+}
+
+.reserve-box .reserve-tabs:before, .reserve-box .reserve-tabs:after {
+	content: " ";
+	display: table;
+}
+
+.reserve-box .reserve-tabs:after {
+	clear: both;
+}
+
+.reserve-box .reserve-tabs li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.reserve-box .reserve-tabs li a {
+	font-size: 16px;
+	display: block;
+	margin-bottom: -2px;
+	padding: 10px 35px;
+	border-bottom: 2px solid #d9d9d9;
+	color:#000;
+}
+
+.reserve-box .reserve-tabs li a:hover, .reserve-box .reserve-tabs li a:focus {
+	text-decoration: none;
+}
+
+.reserve-box .reserve-tabs li.active a, .reserve-box .reserve-tabs li.active a:hover,
+	.reserve-box .reserve-tabs li.active a:focus {
+	color: #ff6a00;
+	border-bottom-color: #ff6a00;
+}
+
+.reserveSuccess {
+	width:1200px;
+	height: 600px;
+	background: url(../images/yuyueSuccessBackground.jpg) 50% 0 no-repeat;
+	margin:0px auto;
+}
+.reserveSuccess .wenzi{
+	float:right;
+}
+.reserveSuccess h1{
+	font-size:30px;
+	color:#F78C0A;
+	margin: 150px 100px 30px 0px;
+}
+.reserveSuccess span{
+	font-size:20px;
+	
+}
+/*登录*/
+.phone{
+	width:250px;
+	height:41px;
+	margin:10px auto;
+	border:1px solid #ff8000;
+}
+
+.phone input {
+	width: 200px;
+	margin-top:11.3px;
+	outline: none;
+	float:left;
+	border:none
+}
+.phone img{
+	width: 17px;
+	height:19px;
+	margin:12px 5px 0 10px;
+	float:left;
+	border-right:1px solid #d9d9d9;
+	padding-right:10px
+}
+
+
+.password{
+	width:250px;
+	height:41px;
+	margin:30px auto;
+	border:1px solid #ff8000;	
+}
+.password input {
+	width: 200px;
+	margin-top:11.3px;
+	outline: none;
+	float:left;
+	border:none
+}
+.password img{
+	width: 17px;
+	height:19px;
+	margin:12px 5px 0 10px;
+	float:left;
+	border-right:1px solid #d9d9d9;
+	padding-right:10px
+}
+.reserveBtn{
+	width:250px;
+	height:41px;
+	margin:30px auto;
+	border:1px solid #ff8000;	
+}
+.reserveBtn input{
+	width:250px;
+	height:41px;
+	background:#ff8000;
+	border:1px solid #ff8000;
+	color:#fff;
+	outline: none;
+	cursor:pointer;
+}
+
+.reserveBtn input:HOVER{
+	width:250px;
+	height:41px;
+	background:#ff5a0b;
+	outline: none;
+	cursor:pointer;
+}
+.forgetPasswordP{
+	color:#ff8000 ;
+	float:right;
+	margin-right:35px
+}
+
+
+/*预约成功*/
+.reserveSuccess-box {
+	width: 320px;
+	height: 328px;
+	padding: 20px;
+	background-color: #fff;
+	float:right;
+	margin:60px 500px 0 0;
+}
+
+.reserveSuccess-box .reserve-tabs {
+	font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1',
+		sans-serif;
+	margin-bottom: 15px;
+	padding: 0;
+	list-style: none;
+	border-bottom: 2px solid #d9d9d9;
+}
+
+.reserveSuccess-box .reserve-tabs:before, .reserveSuccess-box .reserve-tabs:after {
+	content: " ";
+	display: table;
+}
+
+.reserveSuccess-box .reserve-tabs:after {
+	clear: both;
+}
+
+.reserveSuccess-box .reserve-tabs li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.reserveSuccess-box .reserve-tabs li a {
+	font-size: 16px;
+	display: block;
+	margin-bottom: -2px;
+	padding: 10px 35px;
+	border-bottom: 2px solid #d9d9d9;
+	color:#000;
+}
+
+.reserveSuccess-box .reserve-tabs li a:hover, .reserveSuccess-box .reserve-tabs li a:focus {
+	text-decoration: none;
+}
+
+.reserveSuccess-box .reserve-tabs li.active a, .reserveSuccess-box .reserve-tabs li.active a:hover,
+	.reserveSuccess-box .reserve-tabs li.active a:focus {
+	color: #ff6a00;
+	border-bottom-color: #ff6a00;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人中心</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="keyword1,keyword2,keyword3">
+	<meta name="description" content="this is my page">
+	<meta name="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" /> 
+
+	<link href="${contextPath}/css/client_personal.css" rel="stylesheet" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="${contextPath}/css/client_login.css">
+	<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/client_head.nav.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/client_getVerifyCode.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/Validform_v5.3.2_min.js"></script>
+	
+	<script type="text/javascript" src="${contextPath}/js/jquery.select.js" ></script>
+	<script type="text/javascript">
+	    $(function(){
+	        $('select.select').select();
+	    });
+	</script>
+</head>
+<body>
+<script>
+
+function show(obj,id) {    
+    var objDiv = $("#"+id+"");
+    $(objDiv).css("display","block");
+    $(objDiv).css("left", event.clientX);
+    $(objDiv).css("top", event.clientY + 10);  
+}
+function hide(obj,id) {
+    var objDiv = $("#"+id+"");
+    $(objDiv).css("display", "none");
+} 
+</script>
+
+
+<div id="area" style="position:absolute;display:none;color:#fff;background:#000;width:100px;text-align:center;z-index:999; opacity: 0.7;">
+	<p>服务地区</p>
+	<div style="background:#fff;width:110px;height:1px"></div>
+	<p style="border-right: 1px solid #fff;float:left;padding:10px 10px 10px 10px">珠海</p>
+	<p style="float:left;padding:10px 10px 10px 10px">中山</p>
+</div>
+	<!--头部-->
+	<div class="head">
+	    <div class="headCenter">
+	        <!--城市切换-->
+	        <div class="headArea">
+	        <p>房屋所在城市：
+		        <select class="select" name="state" data-value="1">
+		            <option value ="0">中山市</option>
+		            <option value ="1" >珠海市</option>		            
+	        	</select>
+        	</p>	
+	        </div>
+	        <!--登录注册 -->        
+	        <div class="headFunction"></div>
+	     </div>
+	     <img id="mydiv1"  alt="白菜适家" src="${listBottom[0].wechatCode}" style="width:100px; height:100px;position:absolute;display:none; z-index:999;border:1px solid silver;background:silver;">
+	     
+	</div>
+  
+  
+  <!-- 导航栏 -->
+    <div class="nav">
+    <div class="navCenter">
+    <div class="navLogo"><img style="margin:10px 0 0 0 " alt="白菜适家" src="${contextPath}/images/baicai_logo.png"></div>
+	<div class="navCon">
+		
+		<ul class="list">
+        	<li><a href="/">首页</a></li>
+        	<li><a href="${contextPath}/new_house">新房套餐</a></li>
+        	<li><a href="${contextPath}/old_house">旧房套餐</a></li>
+        	<li><a href="${contextPath}/virtualShow">实景作品</a></li>
+        	<li><a href="${contextPath}/threeD">3D体验馆</a></li>
+        	<li><a target="_blank" href="http://www.baicai-home.com/bbs/forum.php?mod=forumdisplay&fid=2">工地直播</a></li>
+        	<li><a target="_blank" href="${contextPath}/index_read">常见问题</a></li>
+        </ul>
+        
+	</div>
+    </div>
+	
+</div>
+<div style="min-width:1200px;border-top: 1px solid #F78C0A;"></div>
+
+
+<!-- 个人信息 -->
+<div class="personal">
+	<div class="personalCenter">
+		<div class="personal_left">
+			<div class="personal_img">
+				<img alt="白菜适家" src="${contextPath}/images/touxiang.jpg"></img><br>
+				<p>${phone}</p>
+			</div>
+		
+			<div class="personal_nav">
+				<ul>
+					<li><a href='${contextPath}/checkOrderDetail'>我的订单</a></li>
+			    	<li><a href='${contextPath}/personal_info'>我的资料</a></li>
+			    	<li><a href='${contextPath}/checkDarwing'>我的图纸</a></li> 
+			    	<#if isOrder==true>
+						<li><a href="javascript:alert('暂无订单设计与材料说明');">设计与材料说明</a></li>
+					<#else>
+						<li><a href='${material}' target="_blank">设计与材料说明</a></li>
+					</#if>	
+			    	<li><a href='${contextPath}/checkContract'>我的合同</a></li>			    	
+			    	<li><a href='${contextPath}/checkPsd'>修改密码</a></li>
+			    </ul>
+			    <div class="hover" style="top:80px;"></div>
+			</div>
+			
+			<script>
+			$(function(){
+				var Height = 40; //li的高度
+				var pTop = 0; // .lanrenzhijia 的paddding-top的值
+				$('.personal_nav li').mouseover(function(){
+					$(this).addClass('on').siblings().removeClass('on');
+					var index = $(this).index();
+					var distance = index*(Height+1)+pTop+'px'; //如果你的li有个border-bottom为1px高度的话，这里需要加1
+					$('.personal_nav .hover').stop().animate({top:distance},150); //默认动画时间为150毫秒，可根据需要修改
+				});
+			});
+			</script>
+		</div>
+
+	<div class="personal_right">
+			<div class="personal_right_top"><p>我的图纸</p></div>
+			
+				<#if isOrder==true>
+					<p>暂无订单</p>
+				<#else>
+					<table class="personal_drawing">
+					  <tr>
+					    <th>图纸名字</th>
+					    <th>图纸链接</th>			    
+					  </tr>
+					  <#list drawingList as obj>
+						  <tr>
+						    <td>${obj.remark}</td>				 
+						  	<td><a href="${obj.picHref}" target="_blank">查看</a></td>
+						  </tr>
+					  </#list>
+					</table>
+				</#if>							
+		</div>	
+	</div>
+</div>
+
+	
+	
+<!-- 底部foot -->
+
+<div class="foot">
+	<div class="footCenter">
+		<div class="footP1">
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=173824876&site=qq&menu=yes">加入我们</a> 
+			<p> 联系电话：${listBottom[0].phone} <br/>QQ：${listBottom[0].qq}  <br/>邮箱：${listBottom[0].email}
+	        </p>
+		</div>
+		<div class="footP2">
+			<a href="${contextPath}/aboutUs">品牌故事</a>
+			<p>地址：${listBottom[0].adress}<br />版权所有：${listBottom[0].copyright}<br />备案号：${listBottom[0].recordNum}</p>
+		</div>
+		<div class="footP3">
+			<a>官方微信公众号</a>
+			<div class="twocode"> 
+				<img alt="白菜适家" src="${listBottom[0].wechatCode}"> 
+			</div>
+		</div>
+		<div class="footP4">
+			<a style="margin-left:50px">扫一扫工地现场</a>
+			<div class="twocode"> 				
+				<img alt="白菜适家" src="${listBottom[0].constructCode}" style="margin-left:50px">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+	
+</body>
+</html>

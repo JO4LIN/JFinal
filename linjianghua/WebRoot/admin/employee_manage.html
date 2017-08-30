@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>DataTables Bootstrap 3 example</title>
+
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="${contextPath}/css/admin_dataTables.bootstrap.css">
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" language="javascript"
+	src="${contextPath}/js/admin_jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="${contextPath}/js/admin_dataTables.bootstrap.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#example').dataTable();
+		
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+
+		<table id="example" class="display" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>联系方式</th>
+					<th>登陆密码</th>
+					<th>职责</th>
+					<th>权限</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<#list list as obj>
+				<tr>
+					<td>${obj_index+1}</td>
+					<td>${obj.realName}</td>
+					<td>${obj.phone}</td>
+					<td>${obj.password}</td>
+					<td>${obj.post}</td>
+					<td><#if obj.order_manage==true>订单管理</#if> <#if
+						obj.pic_manage==true>图片管理</#if> <#if
+						obj.user_manage==true>用户管理</#if> <#if
+						obj.appointment_manage==true>预约管理</#if></td>
+					<td><a href="javascript:;" onclick="dell(${obj.employeeId})">删除</a>
+						<a
+						href="${contextPath}/employee/updatebeforeEmployee?employeeId=${obj.employeeId}">修改</a>
+					</td>
+				</tr>
+				</#list>
+			</tbody>
+		</table>
+
+	</div>
+	 
+	<script type="text/javascript">
+	 
+function dell(id) {
+		var msg = "您真的确定要删除吗？";
+		if (confirm(msg)==true){
+			$.ajax({ 
+		        type: "POST", 		    
+		        dataType: "JSON", 
+		        async: false, 
+		        url: "${contextPath}/employee/delEmployee?employeeId="+id,
+		        success: function(data) {
+		            	if (data.result == 1) {
+		            		alert(data.msg)
+		            		window.location.reload();//刷新当前页面.	            	     
+		                } else {		                                   
+		                	alert(data.msg)
+		                }
+		        }
+		    });	
+			return true;
+		}else{
+			return false;
+			 }
+	   }
+ 
+	</script>
+	<script type="text/javascript">
+		// For demo to fit into DataTables site builder...
+		$('#example').removeClass('display').addClass(
+				'table table-striped table-bordered');
+	</script>
+</body>
+</html>

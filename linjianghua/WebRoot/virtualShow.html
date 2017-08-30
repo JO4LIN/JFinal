@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>白菜适家-珠海互联网家装-只为更好地装修-固定一线工人—实景作品</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="白菜适家,珠海中山装修,珠海中山装修公司,珠海中山装修设计,珠海别墅装修设计,珠海中山装修平台,珠海装修网,珠海中山装修公司排名,珠海中山装修首选白菜适家">
+	<meta name="description" content="白菜适家-互联网透明家装-工程直营-自有产业工人-固定一线工人">
+	<meta name="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+
+	<link href="${contextPath}/css/client_virtualShow.css" rel="stylesheet" type="text/css" />
+	<link href="${contextPath}/css/client_index.css" rel="stylesheet" type="text/css" />
+	<link href="${contextPath}/css/client_rightfloat.css" rel="stylesheet" type="text/css" /> 
+	<link href="${contextPath}/css/client_reserve.css" rel="stylesheet" type="text/css" />
+	<script type='text/javascript' src="${contextPath}/js/jquery-2.1.1.min.js"></script> 
+	
+	<script type="text/javascript" src="${contextPath}/js/client_rightfloat.js"></script> 
+
+	<script type="text/javascript" src="${contextPath}/js/client_nav.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/client_head.nav.js"></script>
+
+	<script type="text/javascript" src="${contextPath}/js/jquery.reveal.js"></script> 
+	
+	<script type='text/javascript' src="${contextPath}/js/client_anli_detail.js"></script>
+    <script type="text/javascript" src="${contextPath}/js/jquery.select.js" ></script>
+    <script type="text/javascript">
+        jQuery(function(){
+            jQuery('select.select').select();
+        });
+    </script>
+</head>
+<body>
+<script>
+ 
+function show(obj,id) {    
+    var objDiv = jQuery("#"+id+"");
+    jQuery(objDiv).css("display","block");
+    jQuery(objDiv).css("left", event.clientX);
+    jQuery(objDiv).css("top", event.clientY + 10);  
+}
+function hide(obj,id) {
+    var objDiv = jQuery("#"+id+"");
+    jQuery(objDiv).css("display", "none");
+} 
+</script>
+
+
+<div id="area" style="position:absolute;display:none;color:#fff;background:#000;width:100px;text-align:center;z-index:999; opacity: 0.7;">
+	<p>服务地区</p>
+	<div style="background:#fff;width:110px;height:1px"></div>
+	<p style="border-right: 1px solid #fff;float:left;padding:10px 10px 10px 10px">珠海</p>
+	<p style="float:left;padding:10px 10px 10px 10px">中山</p>
+</div>
+
+  	<!--头部-->
+	<div class="head">
+	    <div class="headCenter">
+	        <!--城市切换-->
+	        <div class="headArea">
+	        <p>房屋所在城市：
+		        <select class="select" name="state" data-value="1">
+		            <option value ="0">中山市</option>
+		            <option value ="1" >珠海市</option>		            
+	        	</select>
+        	</p>	
+	        </div>
+	        <!--登录注册 -->        
+	        <div class="headFunction"></div>
+	     </div>
+	     <img id="mydiv1"  alt="白菜适家" src="${listBottom[0].wechatCode}" style="width:100px; height:100px;position:absolute;display:none; z-index:999;border:1px solid silver;background:silver;">
+	     
+	</div>
+  
+  
+  
+   <!-- 导航栏 -->
+    <div class="nav">
+    <div class="navCenter">
+    <div class="navLogo"><img style="margin:10px 0 0 0 " alt="白菜适家" src="${contextPath}/images/baicai_logo.png"></div>
+	<div class="navCon">
+		
+		<ul class="list">
+        	<li><a href="/">首页</a></li>
+        	<li><a href="${contextPath}/new_house">新房套餐</a></li>
+        	<li><a href="${contextPath}/old_house">旧房套餐</a></li>
+        	<li><a class="on" href="${contextPath}/virtualShow">实景作品</a></li>
+        	<li><a href="${contextPath}/threeD">3D体验馆</a></li>
+        	<li><a target="_blank" href="http://www.baicai-home.com/bbs/forum.php?mod=forumdisplay&fid=2">工地直播</a></li>
+        	<li><a target="_blank" href="${contextPath}/index_read">常见问题</a></li>
+        </ul>
+        
+        <div class="line"></div>
+	</div>
+    </div>
+	
+</div>
+<div style="min-width:1200px;border-top: 1px solid #F78C0A;"></div>
+	<!--风格分类-->
+		<div class="style">
+				<div class="block block_menusub  add kindsLi">
+				 	<div id="submenu">
+						<ul>
+							<li class='wow bounce'><a target="_self" href="${contextPath}/virtualShow?houseStyle=beiou">北欧宜家</a></li>
+							<li class='wow bounce'><a target="_self" href="${contextPath}/virtualShow?houseStyle=oumei">欧美风情</a></li>
+							<li class='wow bounce'><a target="_self" href="${contextPath}/virtualShow?houseStyle=xiandai">现代时尚</a></li>
+							<li class='wow bounce'><a target="_self" href="${contextPath}/virtualShow?houseStyle=dongfang">东方风韵</a></li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<div class="block block_product  add details">					 
+						<div class="case anli_ul Exampls" >
+							<ul>
+								<#list listSceneFont as obj>
+								<li><a href="javascript:void(0);" data-reveal-id="myModal" onclick="getpic(${obj.sceneId})"
+									data-animation="fade"  id="test1"><img style="width:285px;height:180px" alt="白菜适家" src="${obj.picHref}" /></a>
+									<div class="li_bt">
+										<p>楼盘：<span>${obj.location}</span></p>
+										<p>户型：<span>${obj.houseType}</span></p>
+										<p>面积：<span>${obj.area}㎡</span></p>
+									</div>
+								</li>
+							</#list>	
+
+							</ul>
+						</div>			
+					</div>			 
+			
+				 	<div style="float:left;text-align: center;padding-left: 800px">
+				 		<input style="border:2px solid #dedede;cursor:pointer" type="button" id="prepage" value="上一页" onclick="getprepage()"/>&nbsp &nbsp
+					    <label id="indexpage">${pageNumber}</label>/<label id="totalpage">${total}</label>&nbsp &nbsp
+					    <input style="border:2px solid #dedede;cursor:pointer" type="button" id="nextpage" value="下一页" onclick="getnextpage()"/>&nbsp
+					    <input style="width:50px;border:2px solid #dedede;cursor:pointer" type="number" id="targetpage"/> &nbsp
+					    <input style="border:2px solid #dedede;cursor:pointer" type="button" value="跳转" onclick="gettargetpage()"/>
+ 
+				 	</div>
+				</div>
+					 
+			</div>
+
+
+
+	
+<!-- 底部foot -->
+
+<div class="foot">
+	<div class="footCenter">
+		<div class="footP1">
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=173824876&site=qq&menu=yes">加入我们</a> 
+			<p> 联系电话：${listBottom[0].phone} <br/>QQ：${listBottom[0].qq}  <br/>邮箱：${listBottom[0].email}
+	        </p>
+		</div>
+		<div class="footP2">
+			<a href="${contextPath}/aboutUs">品牌故事</a>
+			<p>地址：${listBottom[0].adress}<br />版权所有：${listBottom[0].copyright}<br />备案号：${listBottom[0].recordNum}</p>
+		</div>
+		<div class="footP3">
+			<a>官方微信公众号</a>
+			<div class="twocode"> 
+				<img alt="白菜适家"  src="${listBottom[0].wechatCode}"> 
+			</div>
+		</div>
+		<div class="footP4">
+			<a style="margin-left:50px">扫一扫工地现场</a>
+			<div class="twocode"> 				
+				<img alt="白菜适家"  src="${listBottom[0].constructCode}" style="margin-left:50px">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- 悬浮框 -->
+<div class="roll-nav">
+    <ul >
+        <li class="a1">
+            <div class="_box">
+                <i></i>             
+            </div>
+            <div class="_sig">
+                <span>
+                    <img alt="白菜适家" style="height:100px;width:100px" src="${listBottom[0].wechatCode}" />
+                </span>
+            </div>
+        </li>
+        <li class="a2 tachu2">
+            <a class="_box" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1808050080&site=qq&menu=yes">
+                <i></i>
+             <!--    <span>在线下单</span> -->
+            </a>
+        </li>
+        <li class="a3">
+            <a href="${contextPath}/reserve" target="_blank" class="_box" >
+                <i></i>
+             <!--    <span>在线咨询</span> -->
+            </a>
+        </li>
+        <li class="a4">
+            <div class="_box">
+                <i></i>
+                
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+<!-- 弹出框 -->
+
+<div id="myModal" class="reveal-modal">
+
+	 <div class="popup">
+	 	<div class="ban" id="demo1">
+			<div class="ban2" id="ban_pic1">
+				<div class="prev1" id="prev1">
+					<img src="${contextPath}/images/anli_bigimg_left.png" width="28" height="51" alt="白菜适家" />
+				</div>
+				<div class="next1" id="next1">
+					<img src="${contextPath}/images/anli_bigimg_right.png" width="28" height="51" alt="白菜适家" />
+				</div>
+				<ul class="ul">
+					<li><a href="javascript:;">  <img src="${contextPath}/images/anli_detail01.jpg" id="big1"
+							style="max-width:700px;height:450px" alt="白菜适家" /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail02.jpg"id="big2"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail03.jpg"id="big3"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail04.jpg"id="big4"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail05.jpg"id="big5"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+
+					<li><a href="javascript:;">  <img src="${contextPath}/images/anli_detail06.jpg" id="big6"
+							style="max-width:700px;height:450px" alt="白菜适家" /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail07.jpg"id="big7"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail08.jpg"id="big8"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail09.jpg"id="big9"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail10.jpg"id="big10"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+							
+					<li><a href="javascript:;">  <img src="${contextPath}/images/anli_detail11.jpg" id="big11"
+							style="max-width:700px;height:450px" alt="白菜适家" /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail12.jpg"id="big12"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail13.jpg"id="big13"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail14.jpg"id="big14"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail15.jpg"id="big15"
+							style="max-width:700px;height:450px" alt="白菜适家"  /></a></li>
+				</ul>
+			</div>
+			<div class="min_pic">
+				<div class="prev_btn1" id="prev_btn1">
+					<img src="${contextPath}/images/anli_smlimg_left.png" width="9" height="18" alt="白菜适家" />
+				</div>
+				<div class="num clearfix" id="ban_num1">
+					<ul>									
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail01.jpg"id="small1"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail02.jpg"id="small2"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail03.jpg"id="small3"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail04.jpg"id="small4"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail05.jpg"id="small5"
+								width="118" height="80" alt="白菜适家" /></a></li>									 						 
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail06.jpg"id="small6"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail07.jpg"id="small7"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail08.jpg"id="small8"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail09.jpg"id="small9"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail10.jpg"id="small10"
+								width="118" height="80" alt="白菜适家" /></a></li>									 						 
+					<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail11.jpg"id="small11"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail12.jpg"id="small12"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail13.jpg"id="small13"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail14.jpg"id="small14"
+								width="118" height="80" alt="白菜适家" /></a></li>
+						<li><a href="javascript:;"><img src="${contextPath}/images/anli_detail15.jpg"id="small15"
+								width="118" height="80" alt="白菜适家" /></a></li>									 						 
+					</ul>
+				</div>
+				<div class="next_btn1" id="next_btn1">
+					<img src="${contextPath}/images/anli_smlimg_right.png" width="9" height="18" alt="白菜适家" />
+				</div>
+			</div>
+		</div>
+		<div id="image_Introduction" class="txtRight">
+				<p class="P1"><span id="title">中信红树湾美式别墅设计</span></p>	
+		 	 
+		 		<p class="P2"> 
+		 			 楼盘：<span id="location">中信红树湾</span><br> 
+		 			 设计师：<span id="designer">蔡海安</span><br> 
+		 			 户型：<span id="houseType">联排别墅</span><br>
+		 			 面积：<span id="Area">500</span>m²<br> 		 			 
+		 			 主要材质：<span id="material">大理石、木材、涂料、石膏线等</span><br>
+		 			 施工单位：<span id="unit">白菜饰家</span><br>
+		 			介绍：<span id="remark">业主明白“专业的事就交给专业的人做”，于是在提出需求后便把设计全权交由设计师主导，
+		 			不仅是对合作的极大推动，更是对传家装饰专业度的认可，而我们也用专业与用心回馈这份信赖，在彼此的信赖中开始描绘这个新家</span></p>		
+		 			<div class="virtualShowMore">
+		 				<a href="${contextPath}/reserve" target="_blank">立即预约</a>									
+					</div>
+		</div>							
+	 </div>
+	 <a class="close-reveal-modal">&#215;</a>
+ </div>
+ 
+<script type="text/javascript">
+function gettargetpage()
+ 	{
+ 		var targetpage=jQuery("#targetpage").val()-0;
+ 		var totalpage=jQuery("#totalpage").html()-0;
+ 		if(totalpage<targetpage)
+ 		{
+ 			alert("超过最大页数")
+ 			return;
+ 		}else if(targetpage<1)
+ 		{
+ 			alert("小于最小页数")
+ 			return;
+ 		}
+ 	 	jQuery("#indexpage").html(targetpage);	
+ 	 	window.location.href="${contextPath}/virtualShow?houseStyle=${houseStyle}&pageNumber="+jQuery("#indexpage").html();
+		
+ 	}
+  	function getprepage(){
+		var indexpage=jQuery("#indexpage").html();
+		if(indexpage-1==0)
+		{
+			alert("这是第一页");
+			return;
+		}else
+		{
+			window.location.href="${contextPath}/virtualShow?houseStyle=${houseStyle}&pageNumber=${pageNumber-1}";
+		}		
+		 	
+ 	}
+  	function getnextpage()
+  	{
+		var indexpage=jQuery("#indexpage").html();
+		var totalpage=jQuery("#totalpage").html();
+		if(indexpage+1>totalpage)
+		{
+			alert("这已经是最后一页");
+			return;
+		}else
+		{	 
+			window.location.href="${contextPath}/virtualShow?houseStyle=${houseStyle}&pageNumber=${pageNumber+1}";
+		}	
+ 	}
+</script> 
+ 
+<script>
+						function getpic(id) {
+							   
+								jQuery.ajax({
+									type : "post",
+									contentType:"multipart/form-data",
+									url  : "${contextPath}/WebSceneDetail?sceneId="+id,
+									async: false, 
+									cache : false,
+									dataType : "json", //返回数据类型 		
+									failure:function()
+									{
+										alert("请求失败");
+									},
+									success : function(data) {				 
+										//请求成功后返回的数据res 
+										//alert("1--->"+data.result[0]);
+										//alert("传回数据--->"+data.urls);					 
+										 jQuery("#big1").attr('src',data.urls[0]); 
+										 jQuery("#big2").attr('src',data.urls[1]); 
+										 jQuery("#big3").attr('src',data.urls[2]); 
+										 jQuery("#big4").attr('src',data.urls[3]); 
+										 jQuery("#big5").attr('src',data.urls[4]); 
+										 jQuery("#big6").attr('src',data.urls[5]); 
+										 jQuery("#big7").attr('src',data.urls[6]); 
+										 jQuery("#big8").attr('src',data.urls[7]); 
+										 jQuery("#big9").attr('src',data.urls[8]); 
+										 jQuery("#big10").attr('src',data.urls[9]); 
+										 jQuery("#big11").attr('src',data.urls[10]); 
+										 jQuery("#big12").attr('src',data.urls[11]); 
+										 jQuery("#big13").attr('src',data.urls[12]); 
+										 jQuery("#big14").attr('src',data.urls[13]); 
+										 jQuery("#big15").attr('src',data.urls[14]); 
+										 
+										 jQuery("#small1").attr('src',data.urls[0]); 
+										 jQuery("#small2").attr('src',data.urls[1]); 
+										 jQuery("#small3").attr('src',data.urls[2]); 
+										 jQuery("#small4").attr('src',data.urls[3]); 
+										 jQuery("#small5").attr('src',data.urls[4]); 
+										 jQuery("#small6").attr('src',data.urls[5]); 
+										 jQuery("#small7").attr('src',data.urls[6]); 
+										 jQuery("#small8").attr('src',data.urls[7]); 
+										 jQuery("#small9").attr('src',data.urls[8]); 
+										 jQuery("#small10").attr('src',data.urls[9]);  
+										 jQuery("#small11").attr('src',data.urls[10]); 
+										 jQuery("#small12").attr('src',data.urls[11]); 
+										 jQuery("#small13").attr('src',data.urls[12]); 
+										 jQuery("#small14").attr('src',data.urls[13]); 
+										 jQuery("#small15").attr('src',data.urls[14]); 
+										 
+										 jQuery("#title").html(data.listSceneInfo[0].title); 
+										 jQuery("#location").html(data.listSceneInfo[0].location);
+										 jQuery("#designer").html(data.listSceneInfo[0].designer); 
+										 jQuery("#houseType").html(data.listSceneInfo[0].houseType); 
+										// $("#Area").html(data.listSceneInfo[0].area);
+										 jQuery("#Area").html(""+data.listSceneInfo[0].area);				
+										 jQuery("#houseStyle").html(data.listSceneInfo[0].houseStyle);  
+										 jQuery("#material").html(data.listSceneInfo[0].material); 
+										 jQuery("#unit").html(data.listSceneInfo[0].unit); 
+										 jQuery("#remark").html(data.listSceneInfo[0].remark); 
+									 }
+								});
+							}									
+						</script>
+
+
+	<script type="text/javascript">
+	jq('#demo1').banqh({
+	box : "#demo1",//总框架
+	pic : "#ban_pic1",//大图框架
+	pnum : "#ban_num1",//小图框架
+	prev_btn : "#prev_btn1",//小图左箭头
+	next_btn : "#next_btn1",//小图右箭头
+	pop_prev : "#prev2",//弹出框左箭头
+	pop_next : "#next2",//弹出框右箭头
+	prev : "#prev1",//大图左箭头
+	next : "#next1",//大图右箭头
+	pop_div : "#demo2",//弹出框框架
+	pop_pic : "#ban_pic2",//弹出框图片框架
+	pop_xx : ".pop_up_xx",//关闭弹出框按钮
+	mhc : ".mhc",//朦灰层
+	autoplay : true,//是否自动播放
+	interTime : 3000,//图片自动切换间隔
+	delayTime : 200,//切换一张图片时间
+	pop_delayTime : 400,//弹出框切换一张图片时间
+	order : 0,//当前显示的图片（从0开始）
+	picdire : true,//大图滚动方向（true为水平方向滚动）
+	mindire : true,//小图滚动方向（true为水平方向滚动）
+	min_picnum : 5,//小图显示数量
+	pop_up : false
+//大图是否有弹出框
+})
+	
+	
+	</script>
+</body>
+</html>

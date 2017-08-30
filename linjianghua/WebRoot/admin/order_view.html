@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>DataTables Bootstrap 3 example</title>
+
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="${contextPath}/css/admin_dataTables.bootstrap.css">
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" language="javascript"
+	src="${contextPath}/js/admin_jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="${contextPath}/js/admin_dataTables.bootstrap.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#example').dataTable();
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+
+		<table id="example" class="display" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>订单号</th>
+					<th>姓名</th>
+					<th>套餐</th>
+					<th>进度</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			<#list orderList as obj>
+				<tr>
+					<td>${obj.orderId}</td>
+					<td>${obj.realName}</td>
+					<td>${obj.product}</td>
+					<td>${obj.state}</td>
+					<td><a href="${contextPath}/orderInfo/checkOrderDetail?orderId=${obj.orderId}">查看</a></td>
+				</tr>
+			</#list> 
+			</tbody>
+		</table>
+
+	</div>
+
+	<script type="text/javascript">
+		// For demo to fit into DataTables site builder...
+		$('#example').removeClass('display').addClass(
+				'table table-striped table-bordered');
+	</script>
+</body>
+</html>

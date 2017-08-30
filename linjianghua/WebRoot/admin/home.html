@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+ 	大苏打似的
+ 		<div>
+ 			<h3>轮播</h3>
+ 			<#list listCarousel as obj>
+ 				<img src="${obj.picHref}">
+    		</#list>
+ 		</div>
+ 		
+ 		<div>
+ 			<h3>套餐</h3>
+ 				<p>套餐一${listPackage[0].packageId}</p><img src="${listPackage[0].picHref}">
+ 				<p>套餐一${listPackage[1].packageId}</p><img src="${listPackage[1].picHref}">
+ 		</div>
+ 		
+ 		 <div>
+ 			<h3>工地</h3>
+ 				<p>
+ 					${listConstruct[0].constructId}
+ 					${listConstruct[0].location}
+ 					${listConstruct[0].houseType}
+ 					${listConstruct[0].area}
+ 				</p>
+ 				<img src="${listConstruct[0].picHref}"><br>
+ 				<p>
+ 					${listConstruct[1].constructId}
+ 					${listConstruct[1].location}
+ 					${listConstruct[1].houseType}
+ 					${listConstruct[1].area}
+ 				</p>
+ 				<img src="${listConstruct[1].picHref}"><br>
+ 				<p>
+ 					${listConstruct[2].constructId}
+ 					${listConstruct[2].location}
+ 					${listConstruct[2].houseType}
+ 					${listConstruct[2].area}
+ 				</p>
+ 				<img src="${listConstruct[2].picHref}"><br>
+ 		</div>
+ 		
+ 		<div>
+ 			<h3>底部</h3>
+ 			<p>${listBottom[0].phone}</p><br>
+ 		</div>
+  </body>
+</html>

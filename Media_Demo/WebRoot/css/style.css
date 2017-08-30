@@ -1,0 +1,441 @@
+﻿@charset "utf-8";
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	color: #666;
+}
+.izl-rmenu{
+	       margin-right: 0;
+	       width: 82px;
+	       position: fixed;
+	       right: 2px;
+	       top: 65%;
+	       -webkit-box-shadow: #DDD 0px 1px 5px;
+	       -moz-box-shadow: #DDD 0px 1px 5px;
+	       box-shadow: #DDD 0px 1px 5px;
+	       z-index:999;
+}
+.izl-rmenu .consult{    
+	background-image: url(../img/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center -77px;
+    display: block;
+    height: 76px;
+    width: 82px;
+}
+.izl-rmenu .consult .phone {
+    background-color: rgb(247,247,255);
+    position: absolute;
+    width: 160px;
+    left: -160px;
+    top: 0px;
+    line-height: 73px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    box-shadow: #DDD -1px 1px 4px;
+}
+.izl-rmenu a.consult:hover .phone{display:inline !important;}
+.izl-rmenu .cart {
+    background-image: url(../img/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #45BDFF;
+    text-align: center;
+    height: 76px;
+    width: 82px;
+}
+.izl-rmenu a.cart:hover .pic{display:block;}
+.izl-rmenu .btn_top {
+    background-image: url(../img/float_top.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 39px;
+    width: 82px;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+}
+.izl-rmenu .btn_top:hover {
+	background-image: url(../img/float_top.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.izl-rmenu .cart .pic {
+	display:none;
+    position: absolute;
+    left: -160px;
+    top: 65px;
+    width: 160px;
+    height: 160px;
+    background:url(../img/weixin_huilian.jpg);
+}
+#udesk-feedback-tab {
+    position: fixed;
+    right: 2px;
+    top: 65%;
+    margin-top: -76px;
+    -webkit-box-shadow: #DDD 0px -1px 5px;
+    -moz-box-shadow: #DDD 0px -1px 5px;
+    box-shadow: #DDD 0px -1px 5px;
+    z-index: 10000;
+    cursor: pointer;
+    background-image: url(../img/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 76px;
+    width: 82px;
+    background-color: #FFF!important;
+    z-index:999;
+}
+
+.logo{
+	padding-top: 14px;
+}
+.logo img{
+	vertical-align: bottom;
+}
+#myCarousel {
+	margin: 50px 0 0 0;
+}
+.carousel-indicators{
+	bottom: 0;
+}
+.carousel-indicators li,.carousel-indicators .active{
+	width: 8px;
+	height: 8px;
+}
+.carousel-caption{
+	padding-bottom: 0;
+}
+.carousel-caption h3{
+	font-size: 27px;
+	margin-bottom: 5px;
+	letter-spacing: 2px;
+}
+.carousel-caption p{
+	letter-spacing: 1px;
+	font-size: 19px;
+}
+#navbar-collapse ul {
+	margin-top:0;
+}
+.carousel-inner img {
+	margin: 0 auto;
+}
+.tab-h2 {
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #0059b2;
+}
+.tab-p {
+	font-size: 15px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #999;
+	margin: 13px 0 26px 0;
+}
+.tab1 {
+	margin: 20px 0;
+	color: #666;
+}
+.tab1 .media-heading {
+	margin: 5px 0 20px 0;
+}
+.tab1 .col {
+	padding: 20px;
+}
+.tab2 {
+	background-color: #eee;
+	padding: 60px 20px;
+	text-align: center;
+}
+.tab2 img {
+	width: 40%;
+	height: 40%;
+}
+.tab3 {
+	padding: 60px 20px;
+	text-align: center;
+}
+.tab3 img {
+	width: 65%;
+	height: 65%;
+}
+.text h3 {
+	font-size: 20px;
+}
+.text p {
+	font-size: 14px;
+}
+.jumbotron {
+	background-image: url(../img/bg.jpg);
+	margin: 50px 0 0 0;
+	color: #ccc;
+}
+.jumbotron h1 {
+	font-size: 26px;
+	padding: 0 0 0 20px;
+}
+.jumbotron h4 {
+	font-size: 15px;
+	padding: 0 0 0 20px;
+}
+#information {
+	background-color: #eee;
+	padding: 40px 0;
+}
+.info-content {
+	background-color: #fff;
+	margin: 0 0 20px 0;
+	box-shadow: 2px 2px 3px #ccc;
+}
+.info-content img {
+	margin: 12px 0;
+}
+.info-content h4 {
+	color: #333;
+	padding: 2px 0 0 0;
+	font-size: 14px;
+}
+.info-content p {
+	line-height: 1.6;
+}
+.info-right {
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #ccc;
+}
+.info-right blockquote {
+	margin: 0;
+	padding: 0;
+}
+.info-right h2 {
+	font-size: 20px;
+	color: #333;
+	padding: 5px;
+}
+.info-right h4 {
+	color: #333;
+	font-size: 16px;
+	padding: 2px 0 0 0;
+	line-height: 1.6;
+}
+#case {
+	padding: 40px 0;
+	background-color: #eee;
+	text-align: center;
+}
+#case h4 {
+	color: #666;
+}
+#case p {
+	color: #666;
+	line-height: 1.6;
+}
+#about {
+	background-color: #eee;
+	padding: 40px 15px;
+}
+#about a {
+	color: #0059b2;
+}
+#about .about {
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #ccc;
+}
+#about h3 {
+	color: #333;
+	font-size: 18px;
+	border-bottom: 1px solid #eee;
+	padding: 20px 0;
+	margin: 0 0 10px 0;
+}
+#about p {
+	line-height: 2;
+	font-size: 13px;
+}
+#footer {
+	background-color: #666;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+	color: #eee;
+}
+/*没有小于768px，是因为Bootstrap3以移动端优先设计*/
+
+/* 小屏幕（平板，大于等于768px） */
+@media (min-width: 768px) {
+	.carousel-inner .item{
+		height: 400px;
+	}
+	.carousel-indicators{
+		bottom: 10px;
+	}
+	.carousel-indicators li,.carousel-indicators .active{
+		width: 11px;
+		height: 11px;
+	}
+	.carousel-caption{
+		padding-bottom: 30px;
+	}
+	.carousel-caption h3{
+		margin-bottom: 8px;
+		font-size:50px;
+	}
+	.carousel-caption p{
+		font-size:30px;																																								
+	}
+	.tab1 {
+		margin: 26px 0;
+	}
+	.tab-h2 {
+		font-size: 26px;
+	}
+	.tab-p {
+		font-size: 16px;
+		margin: 18px 0 34px 0;
+	}
+	.text h3 {
+		font-size: 22px;
+	}
+	.text p {
+		font-size: 15px;
+	}
+	.tab2-text {
+		float: left;
+	}
+	.tab2-img {
+		float: right;
+	}
+	.jumbotron h1 {
+		font-size: 30px;
+	}
+	.jumbotron h4 {
+		font-size: 16px;
+	}
+	.info-content h4 {
+		font-size: 16px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	#about h3 {
+		font-size: 19px;
+	}
+	#about p {
+		font-size: 14px;
+	}
+}
+
+/* 中等屏幕（桌面显示器，大于等于992px） */
+@media (min-width: 992px) {
+	.carousel-inner .item{
+		height: 470px;
+	}
+	.carousel-indicators{
+		bottom: 15px;
+	}
+	.carousel-caption{
+		padding-bottom: 35px;
+	}
+	.carousel-caption h3{
+		margin-bottom: 10px;
+		font-size:54px;
+	}
+	.carousel-caption p{
+		font-size:32px;																																								
+	}
+	.tab1 {
+		margin: 28px 0;
+	}
+	.tab-h2 {
+		font-size: 28px;
+	}
+	.tab-p {
+		font-size: 17px;
+		margin: 19px 0 37px 0;
+	}
+	.text h3 {
+		font-size: 24px;
+	}
+	.text p {
+		font-size: 16px;
+	}
+	.jumbotron h1 {
+		font-size: 33px;
+	}
+	.jumbotron h4 {
+		font-size: 17px;
+	}
+	.info-content h4 {
+		font-size: 18px;
+	}
+	#about h3 {
+		font-size: 20px;
+	}
+	#about p {
+		font-size: 15px;
+	}
+}
+
+/* 大屏幕（大桌面显示器，大于等于1200px） */
+@media (min-width: 1200px) {
+	.carousel-inner .item{
+		height: 540px;
+	}
+	.carousel-indicators{
+		bottom: 20px;
+	}
+	.carousel-indicators li,.carousel-indicators .active{
+		width: 12px;
+		height: 12px;
+	}
+	.carousel-caption{
+		padding-bottom: 45px;
+	}
+	.carousel-caption h3{
+		font-size: 59px;
+	}
+	.carousel-caption p{
+		font-size: 35px;																																								
+	}
+	.tab1 {
+		margin: 30px 0;
+	}
+	.tab-h2 {
+		font-size: 30px;
+	}
+	.tab-p {
+		font-size: 18px;
+		margin: 20px 0 40px 0;
+	}
+	.text h3 {
+		font-size: 26px;
+	}
+	.text p {
+		font-size: 18px;
+	}
+	.jumbotron h1 {
+		font-size: 36px;
+	}
+	.jumbotron h4 {
+		font-size: 18px;
+	}
+	.info-content h4 {
+		font-size: 20px;
+	}
+	#about h3 {
+		font-size: 22px;
+	}
+	#about p {
+		font-size: 16px;
+	}
+}

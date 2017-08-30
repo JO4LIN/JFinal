@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="${contextPath}/orderInfo/updateOrder" method="post" id="updateForm">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>原图</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><label>订单号 </label></td>
+					<input type="hidden" name="orderId" value="${orderList[0].orderId}" class="form-control">
+					<td>${orderList[0].orderId}</td>
+				</tr>
+				<tr>
+					<td><label>姓名</label></td>			
+					<td>${orderList[0].realName}</td>
+				</tr>
+				<tr>
+					<td><label>联系方式 </label></td>
+					<td>${orderList[0].phone}</td>
+				</tr>
+				<tr>
+					<td><label>产品 </label></td>
+					<td><input type="text" name="product" value="${orderList[0].product}" class="form-control"></td>
+				</tr>
+				<tr>
+					<td><label>进度 </label></td>
+					<td><input type="text" name="progress" value="${orderList[0].progress}" class="form-control"></td>
+				</tr>
+				<tr>
+					<td><label>设计师 </label></td> 
+					<td>
+					当前设计师：${designer}<br>
+					<select class="input_md form-control"  name="designer">
+						<#list designerList as obj>
+							<option value="${obj.employeeId}">${obj.realName}</option>
+						</#list>
+					</select>
+					</td>
+					
+					</tr>
+	
+				<tr>
+					<td><label>工程师 </label></td>			 
+			 		<td>
+			 		当前工程师：${engineer}<br>
+					<select class="input_md form-control"  name="engineer">
+						<#list engineerList as obj>
+							<option value="${obj.employeeId}">${obj.realName}</option>
+						</#list>
+					</select>
+					</td>				 
+			 </tr>
+	
+				<tr>
+					<td><label>客服</label></td>
+					<td> 
+					当前客服：${kefu}<br>
+					<select class="input_md form-control" name="service">
+						
+						<#list kefuList as obj>
+							 
+							<option value="${obj.employeeId}">${obj.realName}</option>
+						</#list>
+					</select>
+					</td>
+				</tr>
+		
+				<tr>
+					<td><label>状态 </label></td>
+					<td><input type="text" name="state" value="${orderList[0].state}" class="form-control"></td>
+				</tr>
+				<tr>
+					<td><label>房屋地址</label></td>
+					<td><input type="text" name="houseAdress" value="${orderList[0].houseAdress}" class="form-control" ></td>
+				</tr>
+				<tr>
+					<td><label>下单时间</label></td>
+					<td>${orderList[0].orderTime}</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" class="btn btn-default" value="保存"/> 
+	</form>
+	
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>原图</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><label>设计及材料说明</label></td>
+					<td>
+						<a href="${orderList[0].material}">${orderList[0].material}</a>	
+						<form action="${contextPath}/orderInfo/updatePic" enctype="multipart/form-data" method="post">
+							<input type="hidden" name="type" value="1" />
+							<input type="hidden" name="id" value="${orderList[0].orderId}" />
+							<input type="hidden" name="orderId" value="${orderList[0].orderId}" />
+							<input type="hidden" name="docType" value="pdf" />
+							<input type="file" name="myfile" id="file1"/><br> 
+							<input type="submit" value="修改" onclick="return checknull('#file1')"/> 
+						</form>
+					<td>
+				</tr>
+			
+				<tr>
+					<td><label>合同</label></td>
+					<td>
+						<#list contractList as obj>		
+							<a href="${obj.picHref}">${obj.picHref}</a>				
+							<form action="${contextPath}/orderInfo/updatePic" enctype="multipart/form-data" method="post">
+								<input type="hidden" name="type" value="3" />
+								<input type="hidden" name="id" value="${obj.picId}" />
+								<input type="hidden" name="orderId" value="${orderList[0].orderId}" />
+								<input type="hidden" name="docType" value="jpg" />
+								<input type="file" name="myfile" id="file2"/><br> 
+								<input type="submit" value="修改" onclick="return checknull('#file2')"/> 
+							</form><br>
+						</#list>
+						<form action="${contextPath}/orderInfo/updatePic" enctype="multipart/form-data" method="post">
+							<input type="hidden" name="type" value="2" />
+							<input type="hidden" name="id" value="${orderList[0].orderId}" />
+							<input type="hidden" name="orderId" value="${orderList[0].orderId}" />
+							<input type="hidden" name="docType" value="jpg" />
+							<input type="file" name="myfile" id="file3"/><br> 
+							<input type="submit" value="添加"  onclick="return checknull('#file3')"/> 
+						</form>
+					<td>
+				</tr>
+
+				<tr>
+					<td><label>图纸</label></td>
+					<td>
+						<#list drawingList as obj>
+							<a href="${obj.picHref}">${obj.picHref}</a>
+							<form action="${contextPath}/orderInfo/updatePic" enctype="multipart/form-data" method="post">
+								<input type="hidden" name="type" value="5" />
+								<input type="hidden" name="id" value="${obj.picId}" />
+								<input type="hidden" name="orderId" value="${orderList[0].orderId}" />
+								<input type="hidden" name="docType" value="pdf" />
+								图纸名称：<input type="text" name="remark" value="${obj.remark}" />
+								<input type="file" name="myfile" id="file4"/><br> 
+								<input type="submit" value="修改" onclick="return checknull('#file4')"/> 
+							</form><br>
+						</#list>
+						<form action="${contextPath}/orderInfo/updatePic" enctype="multipart/form-data" method="post">
+							<input type="hidden" name="type" value="4" />
+							<input type="hidden" name="id" value="${orderList[0].orderId}" />
+							<input type="hidden" name="orderId" value="${orderList[0].orderId}" />
+							<input type="hidden" name="docType" value="pdf" />
+							<input type="file" name="myfile" id="file5"/><br> 
+							图纸名称：<input type="text" name="remark" />
+							<input type="submit" value="添加" onclick="return checknull('#file5')"/> 
+						</form>
+					<td>
+				</tr>
+			</tbody>
+		</table>
+</body> 
+
+
+
+<script type="text/javascript">	
+	function checknull(id){		
+		var oInput = $(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{
+				alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 
+			return ;
+		}											
+</script>
+</html>

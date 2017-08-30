@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="${contextPath}/employee/updateEmployee" method="post" class=".form-group" id="myform">
+		<input type="text" name="e.employeeId" value="${e.employeeId}" hidden="hidden">		
+		 <table class="table">
+			<tr>
+				<td><label>姓名</label></td>
+				<td><input type="text" name="e.realName" class="form-control" value="${e.realName}"></td>
+			</tr>
+			<tr>
+				<td><label>联系方式 </label></td>
+				<td><input type="text" name="e.phone" class="form-control" value="${e.phone}"></td>
+			</tr>
+			<tr>
+				<td><label>职责 </label></td>
+				<td><select class="input_md form-control" name="e.post">
+						<option value="普通员工" select="selected">普通员工</option>
+						<option value="工程师">工程师</option>					
+						<option value="设计师">设计师</option>
+							<option value="客服">客服</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>权限 </label></td>
+				<td>
+					<div class="form-group">
+						<label class="checkbox-inline"> <input type="checkbox"  name="e.order_manage"
+							value="true">订单管理
+						</label> <label class="checkbox-inline"> <input type="checkbox"  name="e.pic_manage"
+							value="true">图片管理
+						</label> <label class="checkbox-inline"> <input type="checkbox" name="e.user_manage"
+							value="true">用户管理
+						</label> <label class="checkbox-inline"> <input type="checkbox"  name="e.appointment_manage"
+							value="true">预约管理
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+<td><input onclick="ajaxsubmit()" type="button" class="btn btn-default" value="提交"/></td>
+			
+			
+				 	<td></td>
+			</tr>
+		</table>
+	</form>
+	
+<script type="text/javascript">
+	 
+function ajaxsubmit() {
+		$.ajax({ 
+		        type: "POST", 		    
+		        dataType: "JSON", 
+		        data: $("#myform").serialize(),
+		        async: false, 
+		        url: "${contextPath}/employee/updateEmployee",
+		        success: function(data) {
+		            	if (data.result == 1) {
+		            		alert(data.msg)
+		            		window.location.href="${contextPath}/employee/checkEmployee";	            	     
+		                } else {		                                   
+		                	alert(data.msg)
+		               	window.location.href="${contextPath}/employee/checkEmployee";	            	     
+		                 }
+		        }
+		    });
+	   }
+ 
+	</script>
+</body>
+</html>

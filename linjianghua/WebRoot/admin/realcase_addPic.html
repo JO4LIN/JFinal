@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>realcase_addPic.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+	<link rel="stylesheet" type="text/css" href="${contextPath}/css/admin_img.css" />
+	<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+	
+  </head>
+  
+  <body>
+        	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>原图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div id="preview0" class="picdiv">
+						<img id="imghead0" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,0)" id="file1"/><br> <input
+							type="submit" value="上传"  onclick="return checknull('#file1')"/>
+					</form></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="preview1" class="picdiv">
+						<img id="imghead1" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" id="file2"/>
+						<input type="file" name="myfile" onchange="previewImage(this,1)" onclick="return checknull('#file2')"/><br> <input
+							type="submit" value="上传" />
+					</form></td>
+			</tr>
+
+			<tr>
+				<td>
+					<div id="preview2" class="picdiv">
+						<img id="imghead2" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,2)" id="file3"/><br> <input
+							type="submit" value="上传" onclick="return checknull('#file3')" /> 
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview3" class="picdiv">
+						<img id="imghead3" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,3)" id="file4"/><br> <input
+							type="submit" value="上传"  onclick="return checknull('#file4')"/>
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview4" class="picdiv">
+						<img id="imghead4" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,4)" id="file5"/><br> <input
+							type="submit" value="上传" onclick="return checknull('#file5')" />
+					</form></td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td>
+					<div id="preview5" class="picdiv">
+						<img id="imghead5" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,5)" id="file6"/><br> <input
+							type="submit" value="上传"  onclick="return checknull('#file6')"/>
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview6" class="picdiv">
+						<img id="imghead6" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" id="file2"/>
+						<input type="file" name="myfile" onchange="previewImage(this,6)" id="file7"
+						onclick="return checknull('#file7')"/><br> <input
+							type="submit" value="上传" />
+					</form></td>
+			</tr>
+
+			<tr>
+				<td>
+					<div id="preview7" class="picdiv">
+						<img id="imghead7" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,7)" id="file8"/><br> <input
+							type="submit" value="上传" onclick="return checknull('#file8')" /> 
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview8" class="picdiv">
+						<img id="imghead8" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,8)" id="file9"/><br> <input
+							type="submit" value="上传"  onclick="return checknull('#file9')"/>
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview9" class="picdiv">
+						<img id="imghead9" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,9)" id="file10"/><br> <input
+							type="submit" value="上传" onclick="return checknull('#file10')" />
+					</form></td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					<div id="preview10" class="picdiv">
+						<img id="imghead10" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,10)" id="file11"/><br> <input
+							type="submit" value="上传"  onclick="return checknull('#file11')"/>
+					</form></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="preview11" class="picdiv">
+						<img id="imghead11" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" id="file12"/>
+						<input type="file" name="myfile" onchange="previewImage(this,11)" onclick="return checknull('#file12')"/><br> <input
+							type="submit" value="上传" />
+					</form></td>
+			</tr>
+
+			<tr>
+				<td>
+					<div id="preview12" class="picdiv">
+						<img id="imghead12" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,12)" id="file13"/><br> <input
+							type="submit" value="上传" onclick="return checknull('#file13')" /> 
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview13" class="picdiv">
+						<img id="imghead13" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,13)" id="file14"/><br> <input
+							type="submit" value="上传"  onclick="return checknull('#file14')"/>
+					</form></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<div id="preview14" class="picdiv">
+						<img id="imghead14" src='#' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/upadatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="type" value="10" />
+						<input type="hidden" name="id" value="${sceneId}" />
+						<input type="file" name="myfile" onchange="previewImage(this,14)" id="file15"/><br> <input
+							type="submit" value="上传" onclick="return checknull('#file15')" />
+					</form></td>
+			</tr>
+		</tbody>
+	</table>
+  </body>
+  <script type="text/javascript">	
+	function checknull(id){		
+		var oInput = $(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{	
+				alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 
+			return ;
+		}											
+</script>
+</html>

@@ -1,0 +1,86 @@
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8" >
+<title>图片上传本地预览</title>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css" />
+<script src="${contextPath}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/admin_img.css" />
+<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+	  <div  style="background-color: #f0f0f0;margin-top: 40px">
+		  	<div id="preview0" class="picdiv">
+				<img id="imghead0" src='${listHall3d[0].picHref}' />
+			</div>
+			<div>
+				<form action="${contextPath}/home/updateHall3d" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,0)" name="myfile" id="file1"/><br>
+					<input type="hidden" name="hall3dId" value="${listHall3d[0].hall3dId}" />
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listHall3d[0].contextHref}">
+					<input type="submit" value="更改" onclick="return checknull('#file1')"/><br>
+				</form>
+			</div>
+	  </div>
+		
+	  <div  style="background-color: #f0f0f0;margin-top: 40px">
+		  	<div id="preview1" class="picdiv">
+				<img id="imghead1" src='${listHall3d[1].picHref}' />
+			</div>
+			<div>
+				<form action="${contextPath}/home/updateHall3d" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,1)" name="myfile" id="file2"/><br>
+					<input type="hidden" name="hall3dId" value="${listHall3d[1].hall3dId}" />
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listHall3d[1].contextHref}">
+					<input type="submit" value="更改" onclick="return checknull('#file2')"/><br>
+				</form>
+			</div>
+	  </div>
+	  
+	  
+	  <div  style="background-color: #f0f0f0;margin-top: 40px">
+		  	<div id="preview2" class="picdiv">
+				<img id="imghead2" src='${listHall3d[2].picHref}' />
+			</div>
+			<div>
+				<form action="${contextPath}/home/updateHall3d" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,2)" name="myfile" id="file3"/><br>
+					<input type="hidden" name="hall3dId" value="${listHall3d[2].hall3dId}" />
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listHall3d[2].contextHref}">
+					<input type="submit" value="更改" onclick="return checknull('#file3')"/><br>
+				</form>
+			</div>
+	  </div>
+	  	  <div  style="background-color: #f0f0f0;margin-top: 40px">
+		  	<div id="preview3" class="picdiv">
+				<img id="imghead3" src='${listHall3d[3].picHref}' />
+			</div>
+			<div>
+				<form action="${contextPath}/home/updateHall3d" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,3)" name="myfile" id="file4"/><br>
+					<input type="hidden" name="hall3dId" value="${listHall3d[3].hall3dId}" />
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listHall3d[3].contextHref}">
+					<input type="submit" value="更改" onclick="return checknull('#file4')"/><br>
+				</form>
+			</div>
+	  </div>
+</body>
+<script type="text/javascript">	
+	function checknull(id){		
+		var oInput = $(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{
+			alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 
+			return ;
+		}											
+</script>
+</html>

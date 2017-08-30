@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.picdiv{
+	width:450px;
+	height: 250px;
+	border: 1px solid #000;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+img{
+	width :100%; 
+	height: 100%;
+	border:0;	
+}
+
+#imghead {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+}

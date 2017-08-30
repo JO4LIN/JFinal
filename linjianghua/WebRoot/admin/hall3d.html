@@ -1,0 +1,84 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片上传本地预览</title>
+ 
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+<script src="${contextPath}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/admin_img.css" /> 
+ 
+
+</head>
+<body>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>文字图</th>
+				<th>操作</th>
+				<th>实景图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		<#list hall3dList as obj>	
+			<h2></h2>
+			<tr>
+				<td>
+					<div id="preview${obj.hall3dId}" style="width: 200px;height: 300px;" class="picdiv">
+						<img id="imghead${obj.hall3dId}" src='${obj.fontHref}' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					
+					<form action="${contextPath}/home/updatePic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="id" value="${obj.hall3dId}" />
+						<input type="hidden" name="type" value="13" />
+						<input type="file" onchange="previewImage(this,${obj.hall3dId})" name="myfile" id="${obj.hall3dId}"><br> 
+						网址链接：<input type="text" name="remark" value="${obj.constructHref}" /><br>
+						<input type="submit" value="上传"  onclick="return checknull('#${obj.hall3dId}')"/>
+					</form></td>
+					
+				<td>
+					<div id="preview${obj.hall3dId}1" style="width: 400px;height: 300px;" class="picdiv">
+						<img id="imghead${obj.hall3dId}1" src='${obj.picHref}' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="${contextPath}/home/updatePic" enctype="multipart/form-data" method="post">		
+						<input type="hidden" name="id" value="${obj.hall3dId}" />
+						<input type="hidden" name="type" value="14" />
+						网址链接：<input type="text" name="contextHref" value="${obj.contextHref}" /><br>
+						<input type="file" onchange="previewImage(this,${obj.hall3dId}1)" name="myfile" id="${obj.hall3dId}1"><br> <input
+							type="submit" value="上传"  onclick="return checknull('#${obj.hall3dId}1')">
+					</form></td>
+			</tr>
+			</#list>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">	
+	function checknull(id){		
+	   
+		var oInput = jQuery(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{
+				alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 	
+		}											
+</script>	
+
+</body>
+</html>

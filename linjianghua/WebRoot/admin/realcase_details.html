@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/admin_img.css">
+
+<script src="${contextPath}/js/admin_uploadPre.js"></script>
+
+</head>
+<body>
+	<#list listSceneInfo as obj>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td><label>标题</label></td>
+					<td>${obj.title}</td>
+				</tr>
+				<tr>
+					<td><label>楼盘 </label></td>
+					<td>${obj.location}</td>
+				</tr>
+				<tr>
+					<td><label>户型 </label></td>
+					<td>${obj.houseType}</td>
+
+				</tr>
+				<tr>
+					<td><label>面积 </label></td>
+					<td>${obj.area}</td>
+				</tr>
+				<tr>
+					<td><label>风格 </label></td>
+					<td>${obj.houseStyle}</td>
+				</tr>
+				<tr>
+					<td><label>施工单位 </label></td>
+					<td>${obj.unit}</td>
+				</tr>
+
+				<tr>
+					<td><label>设计师 </label></td>
+					<td>${obj.designer}</td>
+				</tr>
+				<tr>
+					<td><label>原材料</label></td>
+					<td>${obj.material}</td>
+				</tr>
+
+				<tr>
+					<td><label>介绍 </label></td>
+					<td>${obj.remark}</td>
+				</tr>
+
+			</tbody>
+		</table>
+		
+		<#list listScenePic as obj>
+		    <img alt="" src="${obj.picHref}" style="width: 100px;height: 100px">
+		</#list>
+		<br><br>
+		<a class="btn btn-default" href="${contextPath}/scene/checkSceneFont?sceneId=${obj.sceneId}">修改文字内容</a> <a class="btn btn-default" href="${contextPath}/scene/checkScenePic?sceneId=${obj.sceneId}">修改展示图片</a>
+	</#list>
+</body>
+</html>

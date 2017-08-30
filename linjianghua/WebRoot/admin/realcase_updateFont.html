@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>realcase_updateFont.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+	<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+	<script src="../js/admin_uploadPre.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  
+    <form action="${contextPath}/scene/upDateSceneFont" method="post">
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td><label>标题</label></td>
+					<td><input class="form-control" name="title" value="${listSceneFont[0].title}"/></td>
+				</tr>
+				<tr>
+					<td><label>楼盘 </label></td>
+					<td><input class="form-control" name="location" value="${listSceneFont[0].location}"/></td>
+				</tr>
+				<tr>
+					<td><label>户型 </label></td>
+					<td><input class="form-control" name="houseType" value="${listSceneFont[0].houseType}"/></td>
+					</td>
+				</tr>
+				<tr>
+					<td><label>面积 </label></td>
+					<td><input type="number" class="form-control" name="area" value="${listSceneFont[0].area}"/></td>
+				</tr>
+				<tr>
+					<td><label>风格 </label></td>
+					<td><!-- <input class="form-control" name="houseStyle" value="${listSceneFont[0].houseStyle}"/> -->
+						<select class="input_md form-control"   name="houseStyle">
+						<option value="beiou">北欧宜家</option>
+						<option value="oumei">欧美风情</option>
+						<option value="xiandai">现代时尚</option>
+						<option value="dongfang">东方风韵</option>
+					</select>
+					</td>
+					
+				</tr>
+				<tr>
+					<td><label>施工单位 </label></td>
+					<td><input class="form-control" name="unit" value="${listSceneFont[0].unit}"/></td>
+				</tr>
+
+				<tr>
+					<td><label>设计师 </label></td>
+					<td><input class="form-control" name="designer" value="${listSceneFont[0].designer}"/></td>
+				</tr>
+				<tr>
+					<td><label>原材料 </label></td>
+					<td><input class="form-control" name="material" value="${listSceneFont[0].material}"/></td>
+				</tr>
+
+				<tr>
+					<td><label>介绍 </label></td>
+					<td><input class="form-control" name="remark" value="${listSceneFont[0].remark}"/></td>
+				</tr>
+				
+			</tbody>
+		</table>
+		<input type="hidden" name="sceneId" value="${listSceneFont[0].sceneId}"/>
+		<input type="submit" value="确定">
+	</form>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片上传本地预览</title>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css" />
+<script src="${contextPath}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+
+<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+<style type="text/css">
+.picdiv{
+	width:100%;
+	height: 100%;;
+	border: 1px solid #000;
+	overflow: hidden;
+}
+img{
+width :100%; 
+height: 100%;
+border:0;	
+}
+
+#imghead {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+}
+</style>
+</head>
+<body>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>原图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div id="preview0" class="picdiv">
+						<img id="imghead0" src='../images/3D.jpg' />
+					</div>
+				</td>
+				<td><br>
+				<br>
+					<form action="#" method="post">
+						<input type="file" onchange="previewImage(this,0)" /><br> <input
+							type="submit" value="上传" /> <a href="#">删除</a>
+					</form></td>
+			</tr>
+ 
+
+			<tr>
+				<td>
+					<div id="preview2" class="picdiv">
+						<img id="imghead2" src='../images/3D.jpg' />
+					</div>
+				</td>
+				<td><br><br>
+							<form action="#" method="post">
+								<input type="file" onchange="previewImage(this,2)" /><br>
+									<input type="submit" value="上传" /> <a href="#">删除</a>
+							</form></td>
+			</tr>
+
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>

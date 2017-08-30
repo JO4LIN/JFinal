@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/bootstrap.min.css">
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" language="javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+
+<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<form action="${contextPath}/home/updateClass" method="post"> 
+		<table class="table table-bordered">
+			<h3>装修课堂</h3>
+			<tbody>
+			<#list listClass as obj>
+				<tr>
+					<input type="hidden" name="classId" value="${obj.classId}" />
+					<td><p>标题</p></td>
+					<td><input class="form-control" name="title" value="${obj.title}"/></td>
+					<td><p>链接</p></td>
+					<td><input class="form-control" name="contextHref" value="${obj.contextHref}"/></td>
+				</tr>
+			</#list>
+				
+			</tbody>
+		</table>
+		
+		<div><input type="submit" value="保存"/></div>
+	</form>
+
+	<form action="${contextPath}/home/updateClass" method="post"> 	
+		<table class="table table-bordered">
+			<h3>装修日志</h3>
+			<tbody>
+			<#list listLog as obj>
+				<tr>
+					<input type="hidden" name="classId" value="${obj.classId}" />
+					<td><p>标题</p></td>
+					<td><input class="form-control" name="title" value="${obj.title}"/></td>
+					<td><p>链接</p></td>
+					<td><input class="form-control" name="contextHref" value="${obj.contextHref}"/></td>
+				</tr>
+			</#list>
+			</tbody>
+		</table>
+		
+		<div><input type="submit" value="保存"/></div>
+	</form>
+
+	<form action="${contextPath}/home/updatePic" method="post" enctype="multipart/form-data" > 
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td>客服电话图</td>
+					<td><div id="preview0">
+								<img style="width:300px;height:100px;" id="imghead0" width="150" height="150" border="0" src='${phonePic}' />
+						</div>
+						<input type="hidden" name="id" value="1" />
+						<input type="hidden" name="type" value="7" />
+						<input type="file" onchange="previewImage(this,0)" name="myfile" id="file2"/><br>
+						<input type="submit" value="保存" onclick="return checknull('#file2')"/>
+				 	</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+<script type="text/javascript">	
+	function checknull(id){		
+		var oInput = $(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{
+			alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 
+			return ;
+		}											
+</script>
+</body>
+</html>

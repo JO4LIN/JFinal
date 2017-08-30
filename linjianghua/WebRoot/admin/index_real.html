@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index_real.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	<script type="text/javascript" src="${contextPath}/js/admin_uploadPre.js"></script>
+	<link rel="stylesheet" type="text/css" href="${contextPath}/css/admin_img.css" />
+	
+<script type="text/javascript" src="${contextPath}/js/jquery-2.1.1.min.js"></script>
+	
+
+  </head>
+  
+  <body>
+    <h1>北欧宜家</h1>
+  		<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th style="text-align:center;">原图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div id="preview0" class="picdiv">
+						<img id="imghead0" src='${listRealStyle0[0].picHref}' />
+					</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,0)" name="myfile" id="file1"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle0[0].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle0[0].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle0[0].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle0[0].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle0[0].contextHref}"><br>
+					价格范围：<input type="text" name="target" class="form-control" value="${listRealStyle0[0].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file1')"/><br>
+				</form></td>
+			</tr>
+ 
+			<tr>
+				<td>
+					<div id="preview1" class="picdiv">
+						<img id="imghead1" src='${listRealStyle0[1].picHref}' />
+					</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,1)" name="myfile" id="file2"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle0[1].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle0[1].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle0[1].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle0[1].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle0[1].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle0[1].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file2')" /><br>
+				</form></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="preview2" class="picdiv">
+						<img id="imghead2" src='${listRealStyle0[2].picHref}' />
+					</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,2)" name="myfile" id="file3"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle0[2].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle0[2].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle0[2].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle0[2].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle0[2].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle0[2].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file3')"/><br>
+				</form></td>
+			</tr>
+		</tbody>
+	</table>
+	  
+	<h1>欧美风情</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th style="text-align:center;">原图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div id="preview3" class="picdiv">
+						<img id="imghead3" src='${listRealStyle1[0].picHref}' />
+					</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,3)" name="myfile" id="file4"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle1[0].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle1[0].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle1[0].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle1[0].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle1[0].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle1[0].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file4')"/><br>
+				</form></td>
+			</tr>
+ 
+			<tr>
+				<td>
+					<div id="preview4" class="picdiv">
+						<img id="imghead4" src='${listRealStyle1[1].picHref}' />
+					</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,4)" name="myfile" id="file5"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle1[1].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle1[1].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle1[1].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle1[1].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle1[1].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle1[1].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file5')"/><br>
+				</form></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="preview5" class="picdiv">
+						<img id="imghead5" src='${listRealStyle1[2].picHref}' />
+					</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,5)" name="myfile" id="file6"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle1[2].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle1[2].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle1[2].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle1[2].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle1[2].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle1[2].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file6')"/><br>
+				</form></td>
+			</tr>
+		</tbody>
+	</table>
+	  
+	  <h1>现代时尚</h1>
+	  	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th style="text-align:center;">原图</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div id="preview6" class="picdiv">
+				<img id="imghead6" src='${listRealStyle2[0].picHref}' />
+			</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,6)" name="myfile" id="file7"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle2[0].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle2[0].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle2[0].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle2[0].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle2[0].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle2[0].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file7')"/><br>
+				</form></td>
+			</tr>
+ 
+			<tr>
+				<td>
+					<div id="preview7" class="picdiv">
+				<img id="imghead7" src='${listRealStyle2[1].picHref}' />
+			</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,7)" name="myfile" id="file8"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle2[1].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle2[1].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle2[1].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle2[1].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle2[1].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle2[1].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file8')"/><br>
+				</form></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="preview8" class="picdiv">
+				<img id="imghead8" src='${listRealStyle2[2].picHref}' />
+			</div>
+				</td>
+				<td>
+					<form action="${contextPath}/home/updateReal" method="post" enctype="multipart/form-data">
+					<input type="file" onchange="previewImage(this,8)" name="myfile" id="file9"/><br>
+					<input type="hidden" name="realId" value="${listRealStyle2[2].realId}" />
+					位&nbsp;&nbsp;置：<input type="text" name="location" class="form-control" value="${listRealStyle2[2].location}"><br>
+					房屋类型：<input type="text" name="houseType" class="form-control" value="${listRealStyle2[2].houseType}"><br>
+					房屋面积：<input type="number" name="area" class="form-control" value="${listRealStyle2[2].area}"><br>
+					网址链接：<input type="text" name="contextHref" class="form-control" value="${listRealStyle2[2].contextHref}"><br>
+					人物标签：<input type="text" name="target" class="form-control" value="${listRealStyle2[2].target}"><br>
+					<input type="submit" value="更改" onclick="return checknull('#file9')"/><br>
+				</form></td>
+			</tr>
+		</tbody>
+	</table>
+  </body>
+      <script type="text/javascript">	
+	function checknull(id){		
+		var oInput = $(id);						 
+			if(oInput.val() == "") {
+				alert("该文件不能为空");
+				return false;		
+			}else
+			{
+				alert("请耐心等待图片上传，成功后会自动刷新页面");
+				return true;
+			} 
+			return ;
+		}											
+</script>
+</html>

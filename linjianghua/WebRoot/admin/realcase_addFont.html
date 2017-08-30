@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${contextPath}/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="${contextPath}/js/bootstrap.min.js"></script>
+<script src="${contextPath}/js/admin_uploadPre.js"></script>
+<style type="text/css">
+.pics {
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+img{
+	width: 150px;
+	height: 150px;
+}
+</style>
+</head>
+<body>
+
+	<form action="${contextPath}/scene/addSceneFont" method="post">
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td><label>标题</label></td>
+					<td><input class="form-control" name="o.title" /></td>
+				</tr>
+				<tr>
+					<td><label>楼盘 </label></td>
+					<td><input class="form-control" name="o.location" /></td>
+				</tr>
+				<tr>
+					<td><label>户型 </label></td>
+					<td><input class="form-control" name="o.houseType" /></td>
+				</tr>
+				<tr>
+					<td><label>面积 </label></td>
+					<td><input type="number" class="form-control" name="o.area" /></td>
+				</tr>
+				<tr>
+					<td><label>风格 </label></td>
+					<td>
+					<select class="input_md form-control"   name="o.houseStyle">
+						<option value="beiou">北欧宜家</option>
+						<option value="oumei">欧美风情</option>
+						<option value="xiandai">现代时尚</option>
+						<option value="dongfang">东方风韵</option>
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label>施工单位 </label></td>
+					<td><input class="form-control" name="o.unit" /></td>
+				</tr>
+
+				<tr>
+					<td><label>原材料</label></td>
+					<td><input class="form-control" name="o.material" /></td>
+				</tr>
+				
+				<tr>
+					<td><label>设计师 </label></td>
+					<td><input class="form-control" name="o.designer" /></td>
+				</tr>
+				
+				<tr>
+					<td><label>介绍 </label></td>
+			
+					<td><textarea class="form-control" maxlength="120"   name="o.remark"  cols="50" rows="5">在这里输入内容...</textarea></td>  
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" value="下一步">
+	</form>
+
+
+</body>
+</html>
